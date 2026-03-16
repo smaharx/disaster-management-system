@@ -1,52 +1,63 @@
 # Disaster Management System
 
-Comprehensive documentation for the Disaster Management System — a Java desktop application for managing affected families, relief inventory, and reporting for disaster relief operations.
+![Java](https://img.shields.io/badge/Java-8%2B-orange)
+![Database](https://img.shields.io/badge/Database-MySQL-blue)
+![License](https://img.shields.io/badge/License-Not%20Specified-lightgrey)
+![Status](https://img.shields.io/badge/Project-Active-green)
+
+A Java desktop application designed to assist disaster relief organizations in managing affected families, tracking relief inventory, and generating operational reports. The system provides a structured workflow for registering families, managing supplies, and monitoring distribution activities.
 
 ---
 
-## Quick Start
+## Overview
 
-1. Fork the repository and clone your fork.
-2. Install MySQL and create the database.
-3. Import the schema from `database/sqlcode.sql`.
-4. Place required JAR dependencies inside `/lib`.
-5. Update database credentials inside `DBConnection.java`.
-6. Compile and run the application.
+Disaster response efforts require coordination, organization, and clear tracking of resources. This project provides a lightweight desktop-based solution to manage critical aspects of disaster relief operations.
 
----
+The system allows administrators and operators to register affected families, manage relief inventory, monitor stock levels, and generate reports to help coordinate aid distribution.
 
-## Project Overview
-
-This project is a Java-based desktop application designed to assist disaster relief operations. It allows administrators to register affected families, manage relief inventory, track supplies, and generate reports.
-
-The application uses Java Swing for the graphical interface and MySQL for persistent data storage using JDBC connectivity.
+The application is implemented using Java Swing for the user interface and MySQL for persistent data storage.
 
 ---
 
-## Features
+## Key Features
 
-- Secure login interface
-- Family registration and management
-- Inventory management system
-- Restocking functionality
-- Inventory viewing dashboard
-- Basic report generation
-- MySQL database integration
+* User authentication and login interface
+* Registration and management of affected families
+* Inventory tracking for relief supplies
+* Restocking management
+* Inventory monitoring dashboard
+* Data-driven reports
+* MySQL database integration
+* Simple desktop deployment with minimal setup
+
+---
+
+## System Architecture
+
+The application follows a simplified layered architecture:
+
+1. **Presentation Layer** — Java Swing UI components
+2. **Business Logic Layer** — Inventory and operational management
+3. **Data Access Layer** — JDBC-based database connectivity
+4. **Database Layer** — MySQL relational database
+
+This separation helps maintain modularity and simplifies future extension of the system.
 
 ---
 
 ## Technology Stack
 
-- Java (JDK 8 or later)
-- Java Swing (GUI)
-- MySQL Database
-- JDBC
-- MySQL Connector
-- rs2xml library
+| Component             | Technology              |
+| --------------------- | ----------------------- |
+| Programming Language  | Java                    |
+| GUI Framework         | Java Swing              |
+| Database              | MySQL                   |
+| Database Connectivity | JDBC                    |
+| External Libraries    | MySQL Connector, rs2xml |
 
 ---
 
-## Repository Structure
+## Project Structure
 
 ```
 DISASTER-MANAGEMENT-SYS
@@ -64,14 +75,14 @@ DISASTER-MANAGEMENT-SYS
 │   │   └── InventoryItem.java
 │   │
 │   └── views
-│       ├── InventoryUI.java
 │       ├── LoginUI.java
 │       ├── MainUI.java
+│       ├── InventoryUI.java
 │       ├── manageFamiliesUI.java
 │       ├── RegisterFamilyUI.java
-│       ├── report.java
 │       ├── RestockUI.java
-│       └── ViewInventoryUI.java
+│       ├── ViewInventoryUI.java
+│       └── report.java
 │
 ├── icon
 │   └── login.png
@@ -85,13 +96,16 @@ DISASTER-MANAGEMENT-SYS
 
 ---
 
-## Prerequisites
+## Installation
 
-Before running the project ensure the following are installed:
+Clone the repository:
 
-- Java JDK 8 or newer
-- MySQL Server
-- Git
+```
+git clone https://github.com/ShahzaibMahar007/disaster-management-sys.git
+cd disaster-management-sys
+```
+
+Ensure Java JDK 8 or later is installed.
 
 ---
 
@@ -113,13 +127,13 @@ mysql -u root -p disaster_relief < database/sqlcode.sql
 
 ## Configuration
 
-Open:
+Open the file:
 
 ```
 disasterrelief/database/DBConnection.java
 ```
 
-Update credentials:
+Update the database connection details:
 
 ```
 jdbc:mysql://localhost:3306/disaster_relief
@@ -129,7 +143,7 @@ password
 
 ---
 
-## Build & Run
+## Running the Application
 
 Compile the project:
 
@@ -137,7 +151,7 @@ Compile the project:
 javac -cp "lib/*" -d out $(find . -name "*.java")
 ```
 
-Run the application:
+Run the program:
 
 ```
 java -cp "out:lib/*" MainUI
@@ -145,35 +159,27 @@ java -cp "out:lib/*" MainUI
 
 ---
 
-## Usage
+## Application Modules
 
-### Login
+### Login Module
 
-The system starts with a login interface where authorized users can sign in.
+Handles authentication of system users and restricts access to authorized personnel.
 
 ### Family Management
 
-Users can:
-
-- Register new families
-- View registered families
-- Update family information
+Allows registration and modification of disaster-affected households.
 
 ### Inventory Management
 
-Users can:
+Tracks available relief resources and supply quantities.
 
-- Add inventory items
-- Update stock
-- View available supplies
+### Restocking Module
 
-### Restocking
+Allows administrators to add new inventory or replenish existing supplies.
 
-Allows administrators to replenish inventory quantities.
+### Reporting
 
-### Reports
-
-Generate basic reports for monitoring inventory and registered families.
+Generates reports for families and inventory records.
 
 ---
 
@@ -181,102 +187,100 @@ Generate basic reports for monitoring inventory and registered families.
 
 ### Family
 
-Represents disaster-affected households.
+Represents affected households.
 
-Fields may include:
+Attributes may include:
 
-- Family ID
-- Name
-- Address
-- Contact information
-- Household size
+* Family ID
+* Head of family
+* Address
+* Contact information
+* Household size
 
 ### InventoryItem
 
-Represents supply items stored in relief inventory.
+Represents relief items stored in the inventory.
 
-Fields may include:
+Attributes may include:
 
-- Item ID
-- Item name
-- Quantity
-- Description
+* Item ID
+* Item name
+* Description
+* Quantity
 
 ---
 
 ## Dependencies
 
-The project uses the following external libraries located in `/lib`:
+The project relies on the following libraries:
 
-- mysql-connector-j
-- rs2xml
+* mysql-connector-j
+* rs2xml
+
+Both libraries are included in the `/lib` directory.
 
 ---
 
 ## Contributing
 
-1. Fork the repository.
-2. Create a new branch.
+Contributions are welcome.
+
+Steps:
 
 ```
-git checkout -b feature-name
+1. Fork the repository
+2. Create a new branch
+3. Commit your changes
+4. Push to your fork
+5. Open a Pull Request
 ```
-
-3. Commit your changes.
-
-```
-git commit -m "Add feature"
-```
-
-4. Push to your fork.
-
-```
-git push origin feature-name
-```
-
-5. Open a Pull Request on GitHub.
-
----
-
-## Code Style
-
-- Use descriptive variable names
-- Separate UI logic from database logic
-- Follow Java naming conventions
 
 ---
 
 ## Security Considerations
 
-- Avoid storing production database credentials in source code.
-- Use parameterized SQL queries.
+* Avoid storing database credentials in source code for production systems.
+* Use parameterized SQL queries to prevent SQL injection.
 
 ---
 
 ## Troubleshooting
 
-**Database connection fails**  
-Verify MySQL is running and credentials are correct.
+Database connection errors may occur if:
 
-**Application does not compile**  
-Ensure required JAR files exist in `/lib` and are included in the classpath.
+* MySQL service is not running
+* Database credentials are incorrect
+* JDBC driver is missing from the classpath
+
+---
+
+## Future Improvements
+
+Potential improvements for future versions:
+
+* Web-based interface
+* Cloud database integration
+* Role-based access control
+* Audit logging
+* Advanced analytics and reporting
 
 ---
 
 ## Authors
 
-Shahzaib Mahar — Project Lead  
-Najaf — Developer  
-Deepak — Developer
+- Shahzaib Mahar
+- Najaf
+- Deepak
+
+---
 
 ## Contributors
 
 See the full list of contributors on GitHub:
-https://github.com/ShahzaibMahar007/disaster-management-system/graphs/contributors
+https://github.com/ShahzaibMahar007/graphs/contributors
 
 ---
 
 ## License
 
-This project currently does not include a license file. Add an appropriate open-source license before distributing.
-
+This repository currently does not include an open-source license. Add an appropriate license before distributing the software.
