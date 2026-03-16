@@ -1,4 +1,4 @@
-package disasterrelief;
+package disasterrelief.models;
 
 public class InventoryItem {
     private String name;

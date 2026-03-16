@@ -1,9 +1,8 @@
-package disasterrelief;
-
-class Family {
+package disasterrelief.models;
+public class Family {
     String name;
     String location;
-    int totalPoints;
+    public int totalPoints;
 
     int foodNeed;
     int waterNeed;

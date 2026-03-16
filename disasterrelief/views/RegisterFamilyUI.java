@@ -1,5 +1,7 @@
-package disasterrelief;
+package disasterrelief.views;
 
+import disasterrelief.models.*;
+import disasterrelief.database.*;
 import javax.swing.*;
 import java.awt.*;
 import java.util.*;

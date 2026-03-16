@@ -1,8 +1,12 @@
-package disasterrelief;
+package disasterrelief.database;
+
+import disasterrelief.models.*;
 
 import java.util.ArrayList;
 import java.util.List;
 import javax.swing.JOptionPane;
+
+import disasterrelief.models.InventoryItem;
 
 public class InventoryManager {
 

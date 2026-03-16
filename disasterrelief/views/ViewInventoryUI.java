@@ -1,4 +1,7 @@
-package disasterrelief;
+package disasterrelief.views;
+
+import disasterrelief.models.*;
+import disasterrelief.database.*;
 
 import javax.swing.*;
 import java.awt.*;
@@ -26,7 +29,7 @@ public class ViewInventoryUI extends JFrame {
 
         JButton restock = new JButton("Restock Items");
 		restock.setBackground(new Color(220,53,69));
-		restock.setForeground(COLOR.WHITE);
+		restock.setForeground(Color.WHITE);
         add(restock, BorderLayout.SOUTH);
 
         restock.addActionListener(e ->
