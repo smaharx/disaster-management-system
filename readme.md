@@ -59,7 +59,7 @@ This separation helps maintain modularity and simplifies future extension of the
 
 ## Project Structure
 
-```
+```text
 DISASTER-MANAGEMENT-SYS
 │
 ├── database
@@ -78,11 +78,11 @@ DISASTER-MANAGEMENT-SYS
 │       ├── LoginUI.java
 │       ├── MainUI.java
 │       ├── InventoryUI.java
-│       ├── manageFamiliesUI.java
+│       ├── ManageFamiliesUI.java
 │       ├── RegisterFamilyUI.java
 │       ├── RestockUI.java
 │       ├── ViewInventoryUI.java
-│       └── report.java
+│       └── ReportUI.java
 │
 ├── icon
 │   └── login.png
@@ -91,7 +91,9 @@ DISASTER-MANAGEMENT-SYS
 │   ├── mysql-connector-j-9.2.0.jar
 │   └── rs2xml.jar
 │
-└── .gitignore
+├── .gitignore
+├── LICENSE
+└── readme.md
 ```
 
 ---
