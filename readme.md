@@ -1,9 +1,11 @@
 # Disaster Management System
 
 ![Java](https://img.shields.io/badge/Java-8%2B-orange)
+![GUI](https://img.shields.io/badge/GUI-Java%20Swing-blue)
 ![Database](https://img.shields.io/badge/Database-MySQL-blue)
-![License](https://img.shields.io/badge/License-Not%20Specified-lightgrey)
-![Status](https://img.shields.io/badge/Project-Active-green)
+![Connectivity](https://img.shields.io/badge/Connectivity-JDBC-green)
+![License](https://img.shields.io/badge/License-MIT-yellow)
+![Status](https://img.shields.io/badge/Project-Stable-brightgreen)
 
 A Java desktop application designed to assist disaster relief organizations in managing affected families, tracking relief inventory, and generating operational reports. The system provides a structured workflow for registering families, managing supplies, and monitoring distribution activities.
 
@@ -103,7 +105,7 @@ DISASTER-MANAGEMENT-SYS
 Clone the repository:
 
 ```
-git clone https://github.com/ShahzaibMahar007/disaster-management-sys.git
+git clone https://github.com/smaharx/disaster-management-sys.git
 cd disaster-management-sys
 ```
 
@@ -270,7 +272,7 @@ Potential improvements for future versions:
 
 ## Authors
 
-- Shahzaib Mahar
+- Shahzaib Mahar(https://github.com/smaharx)
 - Najaf
 - Deepak
 
@@ -279,7 +281,7 @@ Potential improvements for future versions:
 ## Contributors
 
 See the full list of contributors on GitHub:
-https://github.com/ShahzaibMahar007/disaster-management-system/graphs/contributors
+https://github.com/smaharx/disaster-management-system/graphs/contributors
 
 ---
 
