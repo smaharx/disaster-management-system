@@ -105,8 +105,8 @@ DISASTER-MANAGEMENT-SYS
 Clone the repository:
 
 ```
-git clone https://github.com/smaharx/disaster-management-sys.git
-cd disaster-management-sys
+git clone https://github.com/smaharx/disaster-management-system.git
+cd disaster-management-system
 ```
 
 Ensure Java JDK 8 or later is installed.
@@ -287,4 +287,4 @@ https://github.com/smaharx/disaster-management-system/graphs/contributors
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE] file for details.
