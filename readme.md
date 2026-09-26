@@ -273,8 +273,8 @@ Potential improvements for future versions:
 ## Authors
 
 - Shahzaib Mahar(https://github.com/smaharx)
-- Najaf
-- Deepak
+- Najaf Ali(https://github.com/najafalinajaf449-hue)
+- Deepak Lal(https://github.com/deepaklal-io)
 
 ---
 
